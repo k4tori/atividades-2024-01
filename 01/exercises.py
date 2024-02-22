@@ -1,6 +1,5 @@
 # Exercicio 01
 def max_consecutive_sum(nums):
-    # implementar a solução aqui
     pass
 
 # Testes 01
@@ -12,22 +11,29 @@ def test_max_consecutive_sum():
     print(max_consecutive_sum([-1, -2, -3, -4, -5]) == -1)
 
 
-# Exercício 02
 def is_palindrome(word):
-    # implementar a solução aqui
-    pass
+  frase = word.strip().upper()
+  palavras = frase.split()
+  junto = ''.join(palavras)
+  inverso = ''
+  for letra in range(len(junto) -1, -1, -1):
+      inverso += junto[letra]
+  if inverso == junto:
+    print('É palindromo')
+  else:
+    print('Não é palindromo')    
+  return
 
-# Testes 02
 def text_is_palindrome():
     print(is_palindrome("radar") == True)
     print(is_palindrome("racecar") == True)
     print(is_palindrome("level") == True)
-    # Testes negativos
     print(is_palindrome("python") == False)
     print(is_palindrome("hello") == False)
     print(is_palindrome("12321") == False)
     print(is_palindrome("abccbaa") == False)
 
+text_is_palindrome()
 
 # Exercício 03
 def count_increasing_subsets(nums):
